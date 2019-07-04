@@ -29,7 +29,8 @@
     "mousetrap": "https://github.com/discourse/mousetrap#firefox-alt-key",
     "pikaday": "1.7.0",
     "resumablejs": "1.1.0",
-    "spectrum-colorpicker": "1.8.0"
+    "spectrum-colorpicker": "1.8.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2",
@@ -44,6 +45,9 @@
     "sinon": "^7.2.5"
   },
   "scripts": {
-    "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('NPM is not supported, please use Yarn instead. ')\""
-  }
+    "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('NPM is not supported, please use Yarn instead. ')\"",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
