@@ -55,12 +55,12 @@ gem 'barber'
 
 gem 'message_bus'
 
-gem 'rails_multisite'
+gem 'rails_multisite', '>= 2.0.6'
 
 gem 'fast_xs', platform: :mri
 
 # may move to xorcist post: https://github.com/fny/xorcist/issues/4
-gem 'fast_xor', platform: :mri
+gem 'fast_xor', '>= 1.1.3', platform: :mri
 
 gem 'fastimage'
 
@@ -93,7 +93,7 @@ gem 'pg'
 gem 'mini_sql'
 gem 'pry-rails', require: false
 gem 'r2', '~> 0.2.5', require: false
-gem 'rake'
+gem 'rake', '>= 12.3.3'
 
 gem 'thor', require: false
 gem 'rinku'
@@ -133,7 +133,7 @@ group :test, :development do
   gem 'mocha', require: false
   gem 'rb-fsevent', require: RUBY_PLATFORM =~ /darwin/i ? 'rb-fsevent' : false
   gem 'rb-inotify', '~> 0.9', require: RUBY_PLATFORM =~ /linux/i ? 'rb-inotify' : false
-  gem 'rspec-rails', require: false
+  gem 'rspec-rails', '>= 3.7.2', require: false
   gem 'shoulda', require: false
   gem 'rspec-html-matchers'
   gem 'pry-nav'
@@ -149,7 +149,7 @@ group :development do
 
   # waiting on 2.7.5 per: https://github.com/ctran/annotate_models/pull/595
   if rails_master?
-    gem 'annotate', git: 'https://github.com/ctran/annotate_models.git'
+    gem 'annotate', '2.7.4'
   else
     gem 'annotate'
   end
@@ -185,7 +185,7 @@ gem 'memory_profiler', require: false, platform: :mri
 
 gem 'cppjieba_rb', require: false
 
-gem 'lograge', require: false
+gem 'lograge', '>= 0.10.0', require: false
 gem 'logstash-event', require: false
 gem 'logstash-logger', require: false
 gem 'logster'
