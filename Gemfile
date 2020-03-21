@@ -14,14 +14,14 @@ if rails_master?
 else
   # until rubygems gives us optional dependencies we are stuck with this
   # bundle update actionmailer actionpack actionview activemodel activerecord activesupport railties
-  gem 'actionmailer', '5.2.2.1'
-  gem 'actionpack', '5.2.2.1'
-  gem 'actionview', '5.2.2.1'
+  gem 'actionmailer', '5.2.4.2'
+  gem 'actionpack', '5.2.4.2'
+  gem 'actionview', '5.2.4.2'
   gem 'activemodel', '5.2.2.1'
   gem 'activerecord', '5.2.2.1'
   gem 'activesupport', '5.2.2.1'
-  gem 'railties', '5.2.2.1'
-  gem 'sprockets-rails'
+  gem 'railties', '5.2.4.2'
+  gem 'sprockets-rails', '>= 3.2.1'
 end
 
 gem 'seed-fu'
@@ -55,7 +55,7 @@ gem 'barber'
 
 gem 'message_bus'
 
-gem 'rails_multisite'
+gem 'rails_multisite', '>= 2.0.6'
 
 gem 'fast_xs', platform: :mri
 
@@ -133,7 +133,7 @@ group :test, :development do
   gem 'mocha', require: false
   gem 'rb-fsevent', require: RUBY_PLATFORM =~ /darwin/i ? 'rb-fsevent' : false
   gem 'rb-inotify', '~> 0.9', require: RUBY_PLATFORM =~ /linux/i ? 'rb-inotify' : false
-  gem 'rspec-rails', require: false
+  gem 'rspec-rails', '>= 3.7.2', require: false
   gem 'shoulda', require: false
   gem 'rspec-html-matchers'
   gem 'pry-nav'
@@ -185,7 +185,7 @@ gem 'memory_profiler', require: false, platform: :mri
 
 gem 'cppjieba_rb', require: false
 
-gem 'lograge', require: false
+gem 'lograge', '>= 0.10.0', require: false
 gem 'logstash-event', require: false
 gem 'logstash-logger', require: false
 gem 'logster'
