@@ -14,17 +14,17 @@ if rails_master?
 else
   # until rubygems gives us optional dependencies we are stuck with this
   # bundle update actionmailer actionpack actionview activemodel activerecord activesupport railties
-  gem 'actionmailer', '5.2.2.1'
-  gem 'actionpack', '5.2.2.1'
-  gem 'actionview', '5.2.2.1'
-  gem 'activemodel', '5.2.2.1'
-  gem 'activerecord', '5.2.2.1'
-  gem 'activesupport', '5.2.2.1'
-  gem 'railties', '5.2.2.1'
-  gem 'sprockets-rails'
+  gem 'actionmailer', '5.2.4.3'
+  gem 'actionpack', '5.2.4.3'
+  gem 'actionview', '5.2.4.3'
+  gem 'activemodel', '5.2.4.3'
+  gem 'activerecord', '5.2.4.3'
+  gem 'activesupport', '5.2.4.3'
+  gem 'railties', '5.2.4.3'
+  gem 'sprockets-rails', '>= 3.2.1'
 end
 
-gem 'seed-fu'
+gem 'seed-fu', '>= 2.3.9'
 
 gem 'mail', require: false
 gem 'mini_mime'
@@ -42,7 +42,7 @@ gem 'hiredis'
 gem 'redis', '4.0.1', require:  ["redis", "redis/connection/hiredis"]
 gem 'redis-namespace'
 
-gem 'active_model_serializers', '~> 0.8.3'
+gem 'active_model_serializers', '~> 0.8.4'
 
 gem 'onebox', '1.8.82'
 
@@ -55,7 +55,7 @@ gem 'barber'
 
 gem 'message_bus'
 
-gem 'rails_multisite'
+gem 'rails_multisite', '>= 2.0.6'
 
 gem 'fast_xs', platform: :mri
 
@@ -133,8 +133,8 @@ group :test, :development do
   gem 'mocha', require: false
   gem 'rb-fsevent', require: RUBY_PLATFORM =~ /darwin/i ? 'rb-fsevent' : false
   gem 'rb-inotify', '~> 0.9', require: RUBY_PLATFORM =~ /linux/i ? 'rb-inotify' : false
-  gem 'rspec-rails', require: false
-  gem 'shoulda', require: false
+  gem 'rspec-rails', '>= 3.7.2', require: false
+  gem 'shoulda', '>= 3.5.0', require: false
   gem 'rspec-html-matchers'
   gem 'pry-nav'
   gem 'byebug', require: ENV['RM_INFO'].nil?
@@ -143,13 +143,13 @@ end
 
 group :development do
   gem 'ruby-prof', require: false
-  gem 'bullet', require: !!ENV['BULLET']
+  gem 'bullet', '>= 5.9.0', require: !!ENV['BULLET']
   gem 'better_errors'
   gem 'binding_of_caller'
 
   # waiting on 2.7.5 per: https://github.com/ctran/annotate_models/pull/595
   if rails_master?
-    gem 'annotate', git: 'https://github.com/ctran/annotate_models.git'
+    gem 'annotate', '>= 2.7.4', '>= 2.7.4', git: 'https://github.com/ctran/annotate_models.git'
   else
     gem 'annotate'
   end
@@ -185,7 +185,7 @@ gem 'memory_profiler', require: false, platform: :mri
 
 gem 'cppjieba_rb', require: false
 
-gem 'lograge', require: false
+gem 'lograge', '>= 0.10.0', require: false
 gem 'logstash-event', require: false
 gem 'logstash-logger', require: false
 gem 'logster'
