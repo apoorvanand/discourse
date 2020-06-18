@@ -97,7 +97,7 @@ gem 'rake'
 
 gem 'thor', require: false
 gem 'rinku'
-gem 'sanitize'
+gem 'sanitize', '>= 5.2.1'
 gem 'sidekiq'
 gem 'mini_scheduler'
 
