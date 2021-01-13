@@ -77,17 +77,17 @@ gem 'multi_json'
 gem 'mustache'
 gem 'nokogiri'
 
-gem 'omniauth'
+gem 'omniauth', '>= 2.0.0'
 gem 'omniauth-openid'
 gem 'openid-redis-store'
-gem 'omniauth-facebook'
+gem 'omniauth-facebook', '>= 5.0.0'
 gem 'omniauth-twitter'
-gem 'omniauth-instagram'
-gem 'omniauth-github'
+gem 'omniauth-instagram', '>= 1.3.0'
+gem 'omniauth-github', '>= 2.0.0'
 
-gem 'omniauth-oauth2', require: false
+gem 'omniauth-oauth2', '>= 1.7.1', require: false
 
-gem 'omniauth-google-oauth2'
+gem 'omniauth-google-oauth2', '>= 0.6.0'
 gem 'oj'
 gem 'pg'
 gem 'mini_sql'
