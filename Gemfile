@@ -78,7 +78,7 @@ gem 'mustache'
 gem 'nokogiri'
 
 gem 'omniauth'
-gem 'omniauth-openid'
+gem 'omniauth-openid', '>= 2.0.1'
 gem 'openid-redis-store'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
