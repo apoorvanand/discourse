@@ -117,10 +117,10 @@ group :assets do
 end
 
 group :test do
-  gem 'webmock', require: false
+  gem 'webmock', '>= 3.4.2', require: false
   gem 'fakeweb', '~> 1.3.0', require: false
   gem 'minitest', require: false
-  gem 'danger'
+  gem 'danger', '>= 5.13.0'
 end
 
 group :test, :development do
